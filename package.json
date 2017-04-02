@@ -1,0 +1,8 @@
+{
+  "name": "g-log",
+  "version": "0.0.1",
+  "description": "I couldn't find a suitable logging library, so I made my own.",
+  "main": "./lib/logger",
+  "author": "Rob Grindeland",
+  "license": "ISC"
+}
