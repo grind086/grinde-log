@@ -1,0 +1,1 @@
+jsdoc2md --template README.hbs ./lib/*.js ./lib/transports/*.js > README.md

@@ -1,0 +1,43 @@
+# g-log
+
+```
+npm install --save g-log
+```
+
+```javascript
+const GLog = require('g-log');
+
+GLog.info('The default logger prints to the console');
+
+// => [1491231854012][INFO] The default logger prints to the console
+
+var child = GLog.child({ $tags: 'APP' });
+child.info('Create child logs with tags and metadata');
+
+// => [1491231854012][INFO][APP] Create child logs with tags and metadata
+
+var fileTransport = new GLog.Transports.File('path/to/my/log.log');
+child.transports.push(fileTransport);
+
+child.info('This log will go to both the console, and the log file!', { meta: 'data' });
+
+// => [1491231854012][INFO][APP] This log will go to both the console, and the log file!
+// => {"$tags":["APP"],"meta":"data","time":1491231854012,"level":"info","text":"This log will go to both the console, and the log file!"}
+
+var nextChild = GLog.child({ $tags: 'COMPONENT' });
+nextChild.info('Tags are preserved when creating children');
+
+// => [1491231854012][INFO][APP][COMPONENT] Tags are preserved when creating children
+// => {"$tags":["APP","COMPONENT"],"meta":"data","time":1491231854012,"level":"info","text":"Tags are preserved when creating children"}
+```
+
+## Metadata
+
+Metadata is attached to logs as simple javascript objects. There is currently
+one reserved key, `$tags` which is an array of strings used as tags for the log
+message. When creating child logs, this key is created by concatenating the
+parent's `Logger#meta.$tags` with the child's.
+
+# API
+
+{{>main}}
