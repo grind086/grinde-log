@@ -1,8 +1,9 @@
 {
   "name": "g-log",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "I couldn't find a suitable logging library, so I made my own.",
-  "main": "./lib/logger",
+  "main": "./lib/g-log",
+  "typings": "./lib/g-log.d.ts",
   "author": "Rob Grindeland",
   "license": "ISC"
 }
