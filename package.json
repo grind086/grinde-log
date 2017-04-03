@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "I couldn't find a suitable logging library, so I made my own.",
   "main": "./lib/g-log",
-  "typings": "./lib/g-log.d.ts",
+  "typings": "typings.d.ts",
   "author": "Rob Grindeland",
   "license": "ISC",
   "scripts": {
