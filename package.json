@@ -5,5 +5,16 @@
   "main": "./lib/g-log",
   "typings": "./lib/g-log.d.ts",
   "author": "Rob Grindeland",
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grind086/grinde-log.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grind086/grinde-log/issues"
+  },
+  "homepage": "https://github.com/grind086/grinde-log#readme"
 }
