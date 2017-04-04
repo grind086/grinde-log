@@ -28,7 +28,7 @@ var nextChild = GLog.child({ $tags: 'COMPONENT' });
 nextChild.info('Tags are preserved when creating children');
 
 // => [1491231854012][INFO][APP][COMPONENT] Tags are preserved when creating children
-// => {"$tags":["APP","COMPONENT"],"meta":"data","time":1491231854012,"level":"info","text":"Tags are preserved when creating children"}
+// => {"$tags":["APP","COMPONENT"],"time":1491231854012,"level":"info","text":"Tags are preserved when creating children"}
 ```
 
 ## Metadata
