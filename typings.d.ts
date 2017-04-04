@@ -18,9 +18,6 @@ declare module GLog {
         static levels: { [level: string]: number };
         static logs: { [name: string]: Logger };
         static setLevels(levels: { [level: string]: number }): void;
-        static exists(name: string): boolean;
-        static get(name: string, defaultLevel?: string | number): Logger;
-        static remove(name: string): void;
         static nextid(): number;
         
         // Default log levels
