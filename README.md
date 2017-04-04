@@ -239,8 +239,8 @@ individual logs.
 <a name="Logger+name"></a>
 
 ### logger.name
-The name used to refer to this log in [GLog.get](GLog.get), 
-[GLog.exists](GLog.exists), and [GLog.remove](GLog.remove)
+The name used to refer to this log in [get](#module_GLog.get), 
+[exists](#module_GLog.exists), and [remove](#module_GLog.remove)
 
 **Kind**: instance property of <code>[Logger](#Logger)</code>  
 **Properties**
