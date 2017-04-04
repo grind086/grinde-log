@@ -81,6 +81,9 @@ associated properties and methods.
         * [.Stream](#module_GLog.Transports.Stream) : <code>[Stream](#Stream)</code>
     * [.levels](#module_GLog.levels) : <code>object</code>
     * [.create(level, meta, config)](#module_GLog.create) ⇒ <code>[Logger](#Logger)</code>
+    * [.exists(name)](#module_GLog.exists) ⇒ <code>boolean</code>
+    * [.get(name, defaultLevel)](#module_GLog.get) ⇒ <code>[Logger](#Logger)</code>
+    * [.remove()](#module_GLog.remove)
 
 <a name="module_GLog.version"></a>
 
@@ -147,6 +150,35 @@ Convenience method for creating new loggers.
 | config | <code>object</code> | Additional configuration for the logger |
 | config.transports | <code>array</code> | Where to send our log messages. |
 
+<a name="module_GLog.exists"></a>
+
+### GLog.exists(name) ⇒ <code>boolean</code>
+Checks whether the named log exists.
+
+**Kind**: static method of <code>[GLog](#module_GLog)</code>  
+
+| Param | Type |
+| --- | --- |
+| name | <code>string</code> | 
+
+<a name="module_GLog.get"></a>
+
+### GLog.get(name, defaultLevel) ⇒ <code>[Logger](#Logger)</code>
+Returns the log with `name`, instantiating it if necessary.
+
+**Kind**: static method of <code>[GLog](#module_GLog)</code>  
+
+| Param | Type |
+| --- | --- |
+| name | <code>string</code> | 
+| defaultLevel | <code>string</code> | 
+
+<a name="module_GLog.remove"></a>
+
+### GLog.remove()
+Removes the named log from [logs](#Logger.logs).
+
+**Kind**: static method of <code>[GLog](#module_GLog)</code>  
 <a name="Logger"></a>
 
 ## Logger
