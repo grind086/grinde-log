@@ -1,6 +1,6 @@
 {
   "name": "g-log",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "I couldn't find a suitable logging library, so I made my own.",
   "main": "./lib/g-log",
   "typings": "typings.d.ts",
