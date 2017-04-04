@@ -79,11 +79,8 @@ associated properties and methods.
         * [.Console](#module_GLog.Transports.Console) : <code>[Console](#Console)</code>
         * [.File](#module_GLog.Transports.File) : <code>[File](#File)</code>
         * [.Stream](#module_GLog.Transports.Stream) : <code>[Stream](#Stream)</code>
-    * [.exists](#module_GLog.exists) : <code>function</code>
-    * [.get](#module_GLog.get) : <code>function</code>
-    * [.remove](#module_GLog.remove) : <code>function</code>
     * [.levels](#module_GLog.levels) : <code>object</code>
-    * [.create](#module_GLog.create) ⇒ <code>[Logger](#Logger)</code>
+    * [.create(level, meta, config)](#module_GLog.create) ⇒ <code>[Logger](#Logger)</code>
 
 <a name="module_GLog.version"></a>
 
@@ -129,27 +126,6 @@ A reference to the list of transports
 
 #### Transports.Stream : <code>[Stream](#Stream)</code>
 **Kind**: static property of <code>[Transports](#module_GLog.Transports)</code>  
-<a name="module_GLog.exists"></a>
-
-### GLog.exists : <code>function</code>
-A reference to [exists](#Logger.exists)
-
-**Kind**: static property of <code>[GLog](#module_GLog)</code>  
-**Read only**: true  
-<a name="module_GLog.get"></a>
-
-### GLog.get : <code>function</code>
-A reference to [get](#Logger.get)
-
-**Kind**: static property of <code>[GLog](#module_GLog)</code>  
-**Read only**: true  
-<a name="module_GLog.remove"></a>
-
-### GLog.remove : <code>function</code>
-A reference to [remove](#Logger.remove)
-
-**Kind**: static property of <code>[GLog](#module_GLog)</code>  
-**Read only**: true  
 <a name="module_GLog.levels"></a>
 
 ### GLog.levels : <code>object</code>
@@ -159,10 +135,10 @@ A reference to [levels](#Logger.levels)
 **Read only**: true  
 <a name="module_GLog.create"></a>
 
-### GLog.create ⇒ <code>[Logger](#Logger)</code>
+### GLog.create(level, meta, config) ⇒ <code>[Logger](#Logger)</code>
 Convenience method for creating new loggers.
 
-**Kind**: static property of <code>[GLog](#module_GLog)</code>  
+**Kind**: static method of <code>[GLog](#module_GLog)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -187,9 +163,6 @@ Convenience method for creating new loggers.
     * _static_
         * [.levels](#Logger.levels) : <code>object</code>
         * [.logs](#Logger.logs) : <code>object</code>
-        * [.exists(name)](#Logger.exists) ⇒ <code>boolean</code>
-        * [.get(name, defaultLevel)](#Logger.get) ⇒ <code>[Logger](#Logger)</code>
-        * [.remove()](#Logger.remove)
         * [.setLevels(levels)](#Logger.setLevels)
         * [.nextid()](#Logger.nextid) ⇒ <code>number</code>
 
@@ -225,7 +198,7 @@ The current logging level. Will be converted to a number when set with a string.
 <a name="Logger+remove"></a>
 
 ### logger.remove
-Removes the reference to this log from [logs](#Logger.logs).
+Removes the reference to this log from [GLog.logs](GLog.logs).
 
 **Kind**: instance property of <code>[Logger](#Logger)</code>  
 <a name="Logger+mergeMeta"></a>
@@ -277,35 +250,6 @@ instead use [setLevels](#Logger.setLevels).
 A container that holds all instantiated logs.
 
 **Kind**: static property of <code>[Logger](#Logger)</code>  
-<a name="Logger.exists"></a>
-
-### Logger.exists(name) ⇒ <code>boolean</code>
-Checks whether the named log exists.
-
-**Kind**: static method of <code>[Logger](#Logger)</code>  
-
-| Param | Type |
-| --- | --- |
-| name | <code>string</code> | 
-
-<a name="Logger.get"></a>
-
-### Logger.get(name, defaultLevel) ⇒ <code>[Logger](#Logger)</code>
-Returns the log with `name`, instantiating it if necessary.
-
-**Kind**: static method of <code>[Logger](#Logger)</code>  
-
-| Param | Type |
-| --- | --- |
-| name | <code>string</code> | 
-| defaultLevel | <code>string</code> | 
-
-<a name="Logger.remove"></a>
-
-### Logger.remove()
-Removes the named log from [logs](#Logger.logs).
-
-**Kind**: static method of <code>[Logger](#Logger)</code>  
 <a name="Logger.setLevels"></a>
 
 ### Logger.setLevels(levels)
