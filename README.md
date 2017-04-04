@@ -83,7 +83,7 @@ associated properties and methods.
     * [.create(level, meta, config)](#module_GLog.create) ⇒ <code>[Logger](#Logger)</code>
     * [.exists(name)](#module_GLog.exists) ⇒ <code>boolean</code>
     * [.get(name, defaultLevel)](#module_GLog.get) ⇒ <code>[Logger](#Logger)</code>
-    * [.remove()](#module_GLog.remove)
+    * [.remove(name)](#module_GLog.remove)
 
 <a name="module_GLog.version"></a>
 
@@ -175,10 +175,15 @@ Returns the log with `name`, instantiating it if necessary.
 
 <a name="module_GLog.remove"></a>
 
-### GLog.remove()
+### GLog.remove(name)
 Removes the named log from [logs](#Logger.logs).
 
 **Kind**: static method of <code>[GLog](#module_GLog)</code>  
+
+| Param | Type |
+| --- | --- |
+| name | <code>string</code> | 
+
 <a name="Logger"></a>
 
 ## Logger
@@ -213,7 +218,7 @@ each logging level, that simply redirects to [log](#Logger+log) with a set
 | meta | <code>object</code> | Metadata to attach to all messages |
 | config | <code>object</code> | Additional configuration for the logger |
 | config.name | <code>string</code> | A name that we can use to retrieve our log. |
-| config.transports | <code>array</code> | Where to send our log messages. |
+| config.transports | <code>array</code> | Where to send our log messages. Defaults      to a new [Console](#Console) transport. |
 
 <a name="Logger+level"></a>
 
