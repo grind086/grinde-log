@@ -1,4 +1,4 @@
-declare module GLog {
+declare module 'g-log' {
     interface ILoggerConfig {
         transports: Transport[];
     }
