@@ -192,6 +192,9 @@ Removes the named log from [logs](#Logger.logs).
 * [Logger](#Logger)
     * [new Logger(level, meta, config)](#new_Logger_new)
     * _instance_
+        * [.meta](#Logger+meta)
+        * [.name](#Logger+name)
+        * [.transports](#Logger+transports)
         * [.level](#Logger+level)
         * [.remove](#Logger+remove)
         * [.mergeMeta()](#Logger+mergeMeta) ⇒ <code>object</code>
@@ -219,6 +222,44 @@ each logging level, that simply redirects to [log](#Logger+log) with a set
 | config | <code>object</code> | Additional configuration for the logger |
 | config.name | <code>string</code> | A name that we can use to retrieve our log. |
 | config.transports | <code>array</code> | Where to send our log messages. Defaults      to a new [Console](#Console) transport. |
+
+<a name="Logger+meta"></a>
+
+### logger.meta
+The metadata to attach to all messages. Keys can be overwritten in
+individual logs.
+
+**Kind**: instance property of <code>[Logger](#Logger)</code>  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| meta | <code>object</code> | 
+
+<a name="Logger+name"></a>
+
+### logger.name
+The name used to refer to this log in [GLog.get](GLog.get), 
+[GLog.exists](GLog.exists), and [GLog.remove](GLog.remove)
+
+**Kind**: instance property of <code>[Logger](#Logger)</code>  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| name | <code>string</code> | 
+
+<a name="Logger+transports"></a>
+
+### logger.transports
+The array of transports used by this log.
+
+**Kind**: instance property of <code>[Logger](#Logger)</code>  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| transports | <code>[Array.&lt;Transport&gt;](#Transport)</code> | 
 
 <a name="Logger+level"></a>
 
