@@ -1,6 +1,7 @@
 declare module 'g-log' {
     interface ILoggerConfig {
-        transports: Transport[];
+        name?: string;
+        transports?: Transport[];
     }
     
     export class Logger {
@@ -35,13 +36,13 @@ declare module 'g-log' {
         
         level: number;
         
-        constructor(level: number);
+        constructor(level?: number | string, ...args: any[]);
         private _log(str: string, data: object): void;
         log(str: string, data: object): void;
     }
     
     export var version: string;
-    export var Transports: { [name: string]: new() => Transport };
+    export var Transports: { [name: string]: { new(...args: any[]): Transport }};
     export var levels: { [level: string]: number };
     export function create(level: number, meta?: object, config?: ILoggerConfig): Logger;
     export function exists(name: string): boolean;
