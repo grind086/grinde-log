@@ -9,7 +9,7 @@ declare module 'g-log' {
         meta: object;
         transports: Transport[];
         
-        constructor(level: number, meta?: object, config?: ILoggerConfig);
+        constructor(level: number | string, meta?: object, config?: ILoggerConfig);
         mergeMeta(...metas: object[]): object;
         log(level: string, msg: string, meta: object): void;
         child(level: number, meta?: object, config?: ILoggerConfig): Logger;
@@ -55,7 +55,7 @@ declare module 'g-log' {
     export var transports: Transport[];
     export function mergeMeta(...metas: object[]): object;
     export function log(level: string, msg: string, meta: object): void;
-    export function child(level: number, meta?: object, config?: ILoggerConfig): Logger;
+    export function child(level: number | string, meta?: object, config?: ILoggerConfig): Logger;
     export function child(meta?: object, config?: ILoggerConfig): Logger;
     export function error(msg: string | Error, meta?: object): void;
     export function warn(msg: string | Error, meta?: object): void;
