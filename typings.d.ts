@@ -45,7 +45,7 @@ declare module 'g-log' {
     export var levels: { [level: string]: number };
     export function create(level: number, meta?: object, config?: ILoggerConfig): Logger;
     export function exists(name: string): boolean;
-    export function get(name: string, meta?: object, defaultLevel?: string | number): Logger;
+    export function get(name: string, defaultLevel?: string | number, meta?: object): Logger;
     export function remove(name: string): void;
     
     // From Logger class
